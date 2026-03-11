@@ -439,3 +439,23 @@ display:block;
 margin:40px auto;
 border-radius:10px;
 }
+.menu-row{
+display:flex;
+align-items:center;
+}
+
+.menu-name{
+white-space:nowrap;
+}
+
+.menu-dots{
+flex:1;
+border-bottom:1px dotted #666;
+margin:0 10px;
+}
+
+.menu-price{
+white-space:nowrap;
+font-weight:600;
+}
+
