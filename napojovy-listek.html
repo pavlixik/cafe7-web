@@ -2,117 +2,140 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nápojový lístek | Cafe 7 Bistro</title>
-<link rel="stylesheet" href="styles.css">
+<title>Nápojový a vinný lístek</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f5f5;
+margin:0;
+padding:40px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+}
+
+h1{
+text-align:center;
+margin-bottom:40px;
+}
+
+h2{
+margin-top:40px;
+border-bottom:2px solid #ddd;
+padding-bottom:5px;
+}
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+border-bottom:1px dotted #ddd;
+}
+
+.price{
+font-weight:bold;
+}
+
+.note{
+color:#666;
+font-size:14px;
+margin-bottom:10px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-Cafe <span class="circle">7</span> Bistro
-</div>
+<div class="container">
 
-<nav>
-<a href="index.html">Domů</a>
-<a href="index.html#gallery">Galerie</a>
-<a href="index.html#contact">Kontakt</a>
-<a href="napojovy-listek.html">Nápojový lístek</a>
-<a href="jidelni-listek.html">Jídelní lístek</a>
-<a href="denni-listek.html">Polední nabídka</a>
-</nav>
-</header>
+<h1>Nápojový a vinný lístek</h1>
 
-<section class="section">
+<h2>Šumivá vína</h2>
 
-<h2>Nápojový lístek</h2>
+<div class="menu-item"><span>Fili Mille Bolle Spumante Extra Dry – 0,15 l</span><span class="price">90 Kč</span></div>
+<div class="menu-item"><span>Fili Mille Bolle Spumante – 0,75 l</span><span class="price">450 / 380 Kč</span></div>
+<div class="menu-item"><span>Prapian Prosecco DOCG – 0,75 l</span><span class="price">490 / 420 Kč</span></div>
+<div class="menu-item"><span>Bouvet Cremant de Loire – 0,15 l</span><span class="price">118 Kč</span></div>
+<div class="menu-item"><span>Bouvet Cremant de Loire – 0,75 l</span><span class="price">590 / 520 Kč</span></div>
+<div class="menu-item"><span>D'Artigny Cuvee Prestige – nealkoholické</span><span class="price">90 Kč</span></div>
 
-<div class="drinks-layout">
+<h2>Bílá vína</h2>
 
-<!-- PRAVÁ STRANA – VÍNA -->
+<div class="menu-item"><span>Pinot Grigio – 0,15 l</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Rulandské šedé – 0,75 l</span><span class="price">425 / 355 Kč</span></div>
+<div class="menu-item"><span>Neuburské pozdní sběr – 0,75 l</span><span class="price">450 / 380 Kč</span></div>
 
-<div class="drinks-right">
+<h2>Růžové víno</h2>
 
-<h2 class="menu-category">VÍNA</h2>
+<div class="menu-item"><span>Etoile de Mer Blush Rosé – 0,75 l</span><span class="price">425 / 355 Kč</span></div>
 
-<h3 class="sub-category">Šumivá vína</h3>
+<h2>Červená vína</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Fili Mille Bolle Spumante Extra Dry – 0,15 l</span><span class="menu-dots"></span><span class="menu-price">90 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Fili Mille Bolle Spumante – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">450 / 380 Kč</span></div></div>
+<div class="menu-item"><span>Cabernet Sauvignon – 0,15 l</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Lunatico Primitivo – 0,75 l</span><span class="price">450 / 380 Kč</span></div>
+<div class="menu-item"><span>Campofiorin Rosso del Veronese – 0,75 l</span><span class="price">590 / 520 Kč</span></div>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Prapian Prosecco DOCG – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">490 / 420 Kč</span></div></div>
+<h2>Káva</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Bouvet Cremant de Loire – 0,15 l</span><span class="menu-dots"></span><span class="menu-price">118 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Bouvet Cremant de Loire – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">590 / 520 Kč</span></div></div>
+<div class="note">(Naše porce kávy je 7,5 g)</div>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">D'Artigny Cuvee Prestige – nealkoholické</span><span class="menu-dots"></span><span class="menu-price">90 Kč</span></div></div>
+<div class="menu-item"><span>Ristretto</span><span class="price">54 Kč</span></div>
+<div class="menu-item"><span>Espresso</span><span class="price">54 Kč</span></div>
+<div class="menu-item"><span>Dvojité espresso</span><span class="price">86 Kč</span></div>
+<div class="menu-item"><span>Espresso macchiato</span><span class="price">54 Kč</span></div>
+<div class="menu-item"><span>Espresso lungo</span><span class="price">54 Kč</span></div>
+<div class="menu-item"><span>Cappuccino</span><span class="price">65 Kč</span></div>
+<div class="menu-item"><span>Flat white</span><span class="price">85 Kč</span></div>
+<div class="menu-item"><span>Americano</span><span class="price">85 Kč</span></div>
+<div class="menu-item"><span>Latte macchiato</span><span class="price">85 Kč</span></div>
+<div class="menu-item"><span>Turecká káva</span><span class="price">50 Kč</span></div>
+<div class="menu-item"><span>Vídeňská káva</span><span class="price">95 Kč</span></div>
 
-<h3 class="sub-category">Bílá vína</h3>
+<h2>Ledové kávy</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Pinot Grigio – 0,15 l</span><span class="menu-dots"></span><span class="menu-price">75 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Rulandské šedé – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">425 / 355 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Neuburské pozdní sběr – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">450 / 380 Kč</span></div></div>
+<div class="menu-item"><span>Espresso s našlehaným mlékem</span><span class="price">95 Kč</span></div>
+<div class="menu-item"><span>Espresso Tonic</span><span class="price">95 Kč</span></div>
 
-<h3 class="sub-category">Růžové víno</h3>
+<h2>Teplé nápoje</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Etoile de Mer Blush Rosé – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">425 / 355 Kč</span></div></div>
+<div class="menu-item"><span>Horká čokoláda</span><span class="price">95 Kč</span></div>
+<div class="menu-item"><span>Grog</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Chai čaj</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Domácí svařené víno</span><span class="price">95 Kč</span></div>
+<div class="menu-item"><span>Hot Cappy</span><span class="price">65 Kč</span></div>
 
-<h3 class="sub-category">Červená vína</h3>
+<h2>Čaje</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Cabernet Sauvignon – 0,15 l</span><span class="menu-dots"></span><span class="menu-price">75 Kč</span></div></div>
+<div class="menu-item"><span>Harney & Sons – výběr</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Čerstvý zázvorový čaj</span><span class="price">95 Kč</span></div>
+<div class="menu-item"><span>Čerstvý mátový čaj</span><span class="price">95 Kč</span></div>
+<div class="menu-item"><span>Goji berry čaj</span><span class="price">95 Kč</span></div>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Lunatico Primitivo – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">450 / 380 Kč</span></div></div>
+<h2>Nealkoholické nápoje</h2>
 
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Campofiorin Rosso del Veronese – 0,75 l</span><span class="menu-dots"></span><span class="menu-price">590 / 520 Kč</span></div></div>
+<div class="menu-item"><span>Romerquelle 0,33 l</span><span class="price">57 Kč</span></div>
+<div class="menu-item"><span>Coca Cola / Coca Cola Zero</span><span class="price">57 Kč</span></div>
+<div class="menu-item"><span>Tonic / Ginger Tonic</span><span class="price">57 Kč</span></div>
+<div class="menu-item"><span>Ledový čaj</span><span class="price">57 Kč</span></div>
+<div class="menu-item"><span>Cappy džus</span><span class="price">57 Kč</span></div>
+<div class="menu-item"><span>Domácí limonáda</span><span class="price">75 Kč</span></div>
+<div class="menu-item"><span>Red Bull</span><span class="price">75 Kč</span></div>
 
-</div>
+<h2>Pivo</h2>
 
-<!-- LEVÁ STRANA – NÁPOJE -->
-
-<div class="drinks-left">
-
-<h2 class="menu-category">KÁVA</h2>
-<p class="note">(Naše porce kávy je 7,5 g)</p>
-
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Ristretto</span><span class="menu-dots"></span><span class="menu-price">54 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Espresso</span><span class="menu-dots"></span><span class="menu-price">54 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Dvojité espresso</span><span class="menu-dots"></span><span class="menu-price">86 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Espresso macchiato</span><span class="menu-dots"></span><span class="menu-price">54 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Espresso lungo</span><span class="menu-dots"></span><span class="menu-price">54 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Cappuccino</span><span class="menu-dots"></span><span class="menu-price">65 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Flat white</span><span class="menu-dots"></span><span class="menu-price">85 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Americano</span><span class="menu-dots"></span><span class="menu-price">85 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Latte macchiato</span><span class="menu-dots"></span><span class="menu-price">85 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Turecká káva</span><span class="menu-dots"></span><span class="menu-price">50 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Vídeňská káva</span><span class="menu-dots"></span><span class="menu-price">95 Kč</span></div></div>
-
-<h2 class="menu-category">NEALKOHOLICKÉ NÁPOJE</h2>
-
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Romerquelle 0,33 l</span><span class="menu-dots"></span><span class="menu-price">57 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Coca Cola / Coca Cola Zero</span><span class="menu-dots"></span><span class="menu-price">57 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Tonic / Ginger Tonic</span><span class="menu-dots"></span><span class="menu-price">57 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Ledový čaj</span><span class="menu-dots"></span><span class="menu-price">57 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Cappy džus</span><span class="menu-dots"></span><span class="menu-price">57 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Domácí limonáda</span><span class="menu-dots"></span><span class="menu-price">75 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Red Bull</span><span class="menu-dots"></span><span class="menu-price">75 Kč</span></div></div>
-
-<h2 class="menu-category">PIVO</h2>
-
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Pilsner Urquell 0,33 l</span><span class="menu-dots"></span><span class="menu-price">58 Kč</span></div></div>
-<div class="menu-item"><div class="menu-row"><span class="menu-name">Birell nealkoholické</span><span class="menu-dots"></span><span class="menu-price">58 Kč</span></div></div>
+<div class="menu-item"><span>Pilsner Urquell 0,33 l</span><span class="price">58 Kč</span></div>
+<div class="menu-item"><span>Birell nealkoholické</span><span class="price">58 Kč</span></div>
 
 </div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Cafe 7 Bistro
-</footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
