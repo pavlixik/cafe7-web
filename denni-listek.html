@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denní lístek - Café 7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        /* Styl pro navigaci */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        /* Styl pro fotku */
+        .foto-kontejner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="jidelni-listek.html">Jídelní lístek</a>
+        <a href="napojovy-listek.html">Nápojový lístek</a>
+    </nav>
+
+    <div class="foto-kontejner">
+        <h1>Dnešní nabídka</h1>
+        <img src="denni-nabidka.png" alt="Denní nabídka">
+    </div>
+
+</body>
+</html>
