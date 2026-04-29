@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jídelní lístek | Cafe 7 Bistro</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+    /* Přidaný styl pro patičku lístku */
+    .cooking-time {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin: 40px 0;
+        text-transform: uppercase;
+        color: #333;
+    }
+</style>
 </head>
 
 <body>
@@ -20,7 +31,6 @@ Cafe <span class="circle">7</span> Bistro
 <a href="index.html#contact">Kontakt</a>
 <a href="napojovy-listek.html">Nápojový lístek</a>
 <a href="jidelni-listek.html">Jídelní lístek</a>
-<a href="denni-listek.html">Polední nabídka</a>
 </nav>
 </header>
 
@@ -30,13 +40,22 @@ Cafe <span class="circle">7</span> Bistro
 
 <div class="menu-container">
 
+<h2 class="menu-category">POLÉVKA</h2>
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Dle denní nabídky</span>
+<span class="menu-dots"></span>
+<span class="menu-price">80,-</span>
+</div>
+</div>
+
 <h2 class="menu-category">JÍDLA</h2>
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">3 ks míchaná vejce s pažitkou</span>
+<span class="menu-name">3ks Míchaná vejce s pažitkou</span>
 <span class="menu-dots"></span>
-<span class="menu-price">185 Kč</span>
+<span class="menu-price">185,-</span>
 </div>
 <p class="menu-desc">
 Doplněná zeleninovým salátem zdobeným praženými semínky a granátovým jablkem, podávaná s naším chlebem
@@ -45,23 +64,23 @@ Doplněná zeleninovým salátem zdobeným praženými semínky a granátovým j
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">2 ks míchaná vejce se šunkou / slaninou</span>
+<span class="menu-name">2ks Míchaná vejce se šunkou / slaninou</span>
 <span class="menu-dots"></span>
-<span class="menu-price">225 Kč</span>
+<span class="menu-price">225,-</span>
 </div>
 <p class="menu-desc">
-Doplněná zeleninovým salátem zdobeným praženými semínky a granátovým jablkem, podávaná s naším chlebem
+Doplněná zeleninovým salátkem zdobeným praženými semínky a granátovým jablkem, podávaná s naším chlebem
 </p>
 </div>
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">2 ks míchaná vejce s restovaným rajčetem a paprikou</span>
+<span class="menu-name">2ks Míchaná vejce s restovaným rajčetem a paprikou</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">245,-</span>
 </div>
 <p class="menu-desc">
-Podávaná s plátkem čerstvého rajčete, lístky bazalky, doplněná salátkem z rukoly, chléb
+Podávaná s půlkou čerstvého avokáda, zdobeného ořechy, doplněná salátkem z rukoly, chléb
 </p>
 </div>
 
@@ -69,10 +88,10 @@ Podávaná s plátkem čerstvého rajčete, lístky bazalky, doplněná salátke
 <div class="menu-row">
 <span class="menu-name">Omeleta s rajčaty, mozzarellou a pestem</span>
 <span class="menu-dots"></span>
-<span class="menu-price">225 Kč</span>
+<span class="menu-price">225,-</span>
 </div>
 <p class="menu-desc">
-Doplněna rukolou a podávaná s naším chlebem
+Doplněná rukolou zdobená hráškovými výhonky a naším chlebem
 </p>
 </div>
 
@@ -80,7 +99,7 @@ Doplněna rukolou a podávaná s naším chlebem
 <div class="menu-row">
 <span class="menu-name">Omeleta s klobáskou sypaná čedarem</span>
 <span class="menu-dots"></span>
-<span class="menu-price">225 Kč</span>
+<span class="menu-price">225,-</span>
 </div>
 <p class="menu-desc">
 Doplněná salátkem s dijonskou majonézou a naším chlebem
@@ -89,12 +108,12 @@ Doplněná salátkem s dijonskou majonézou a naším chlebem
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">Vafle plněná salátkem</span>
+<span class="menu-name">Vafle plněné salátkem, šunkou, slaninou</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">225,-</span>
 </div>
 <p class="menu-desc">
-Šunka, slanina, sázené vejce, čedar, zdobené dijonským dipem
+Sázeným vejcem, sypané čedarem, zdobené dijonskou majonézou
 </p>
 </div>
 
@@ -102,32 +121,32 @@ Doplněná salátkem s dijonskou majonézou a naším chlebem
 <div class="menu-row">
 <span class="menu-name">Pikantní fazole v tomatové omáčce</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">245,-</span>
 </div>
 <p class="menu-desc">
-S klobásou, volským okem a sázeným vejcem, podávané s naším chlebem
+S klobáskou, anglickou slaninou a sázeným vejcem, podávané s naším chlebem
 </p>
 </div>
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">Sýrový talíř</span>
+<span class="menu-name">Sýrový talíř se sázenými vejci</span>
 <span class="menu-dots"></span>
-<span class="menu-price">295 Kč</span>
+<span class="menu-price">295,-</span>
 </div>
 <p class="menu-desc">
-Sázená vejce, avokádo, máslo, med, marmeláda, olivy, salát, podávaný s bagetkou
+Avokádem, máslem, medem, marmeládou, olivami a salátem, podávaný s bagetkou
 </p>
 </div>
 
 <div class="menu-item">
 <div class="menu-row">
-<span class="menu-name">Velký talíř s variací sýrů</span>
+<span class="menu-name">Velký talíř s variací sýrů a uzenin</span>
 <span class="menu-dots"></span>
-<span class="menu-price">450 Kč</span>
+<span class="menu-price">450,-</span>
 </div>
 <p class="menu-desc">
-Šunka, uzený losos, prosciutto, avokádo, sázená vejce, máslo, med, marmeláda, olivy, zeleninový salát s ořechy a granátovým jablkem, podávaný s naším chlebem
+Šunkou, uzeným lososem, prosciuttem, avokádem, sázenými vejci, máslem, marmeládou a medem, doplněný zeleninovým salátkem zdobeným ořechy a granátovým jablkem, podávaný s naším chlebem
 </p>
 </div>
 
@@ -135,7 +154,41 @@ Sázená vejce, avokádo, máslo, med, marmeláda, olivy, salát, podávaný s b
 <div class="menu-row">
 <span class="menu-name">Panini zapečené se šunkou, sýrem a salátem</span>
 <span class="menu-dots"></span>
-<span class="menu-price">180 Kč</span>
+<span class="menu-price">180,-</span>
+</div>
+</div>
+
+<h2 class="menu-category">PIZZA</h2>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Margarita</span>
+<span class="menu-dots"></span>
+<span class="menu-price">185,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Šunková</span>
+<span class="menu-dots"></span>
+<span class="menu-price">185,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Sýrová</span>
+<span class="menu-dots"></span>
+<span class="menu-price">185,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Salámová</span>
+<span class="menu-dots"></span>
+<span class="menu-price">185,-</span>
 </div>
 </div>
 
@@ -145,10 +198,10 @@ Sázená vejce, avokádo, máslo, med, marmeláda, olivy, salát, podávaný s b
 <div class="menu-row">
 <span class="menu-name">Salát Caesar</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">245,-</span>
 </div>
 <p class="menu-desc">
-Grilované kuřecí prsíčko, vypečená slanina, krutony, římský salát, dressing
+Grilované kuřecí prsíčko, vypečená slanina, parmazán, římský salát, dresing, máslové krutonky
 </p>
 </div>
 
@@ -156,10 +209,10 @@ Grilované kuřecí prsíčko, vypečená slanina, krutony, římský salát, dr
 <div class="menu-row">
 <span class="menu-name">Salát s burratou</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">245,-</span>
 </div>
 <p class="menu-desc">
-Směs salátových listů, cherry rajčata, granátové jablko, opražená semínka, podávaný s bagetkou
+Směsí salátových listů, cherry rajčat, granátového jablka, opražených semínek, podávaný s bagetkou
 </p>
 </div>
 
@@ -167,11 +220,85 @@ Směs salátových listů, cherry rajčata, granátové jablko, opražená semí
 <div class="menu-row">
 <span class="menu-name">Salát s uzeným lososem</span>
 <span class="menu-dots"></span>
-<span class="menu-price">245 Kč</span>
+<span class="menu-price">245,-</span>
 </div>
 <p class="menu-desc">
-Směs salátových listů, avokádo, čerstvé zelené fazolky, sázené vejce, podávaný s bagetkou
+Směsí salátových listů, avokádem, čerstvé zeleniny a sázeným vejcem, podávaný s bagetkou
 </p>
+</div>
+
+<h2 class="menu-category">SLADKÉ A DOBROTY</h2>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Domácí dorty, zákusky, koláče</span>
+<span class="menu-dots"></span>
+<span class="menu-price">od 55,-</span>
+</div>
+<p class="menu-desc">Dle denní nabídky</p>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Obložené chleby, bagely, croissanty</span>
+<span class="menu-dots"></span>
+<span class="menu-price">dle nabídky</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Talířek s variací sýrů a olivami</span>
+<span class="menu-dots"></span>
+<span class="menu-price">140,-</span>
+</div>
+</div>
+
+<h2 class="menu-category">ZMRZLINA (Značka "La Panna")</h2>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Kopečková zmrzlina a sorbet (1 kopeček)</span>
+<span class="menu-dots"></span>
+<span class="menu-price">40,-</span>
+</div>
+<p class="menu-desc">Dle sezónní nabídky</p>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Dva kopečky zmrzliny se šlehačkou</span>
+<span class="menu-dots"></span>
+<span class="menu-price">100,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Ovocné poháry se zmrzlinou a šlehačkou</span>
+<span class="menu-dots"></span>
+<span class="menu-price">155,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Palačinky s marmeládou, šlehačkou, ovocem a 2 kopečky zmrzliny</span>
+<span class="menu-dots"></span>
+<span class="menu-price">155,-</span>
+</div>
+</div>
+
+<div class="menu-item">
+<div class="menu-row">
+<span class="menu-name">Vafle s čerstvým ovocem, 2 kopečky zmrzliny a šlehačkou</span>
+<span class="menu-dots"></span>
+<span class="menu-price">155,-</span>
+</div>
+</div>
+
+<div class="cooking-time">
+    "VAŘÍME DO 18 HODIN"
 </div>
 
 </div>
