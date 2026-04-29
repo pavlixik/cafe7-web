@@ -13,6 +13,33 @@ color:#fff;
 line-height:1.6;
 }
 
+/* ============================================================
+   NOVÉ DOPLŇUJÍCÍ INFORMACE (Alergeny, Gramáže, Káva)
+   ============================================================ */
+
+.menu-info {
+    max-width: 800px;
+    margin: 60px auto 30px auto;
+    padding: 30px;
+    border: 1px solid #222;
+    background: #050505;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.8;
+    border-radius: 8px;
+}
+
+.menu-info p {
+    margin: 8px 0;
+}
+
+.info-box {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+}
 
 /* HEADER */
 
@@ -494,3 +521,7 @@ font-weight:600;
     border: 1px solid #333;
     text-transform: uppercase;
 }
+
+/* ============================================================
+   KONEC STYLESHEETU
+   ============================================================ */
