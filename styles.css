@@ -459,3 +459,38 @@ white-space:nowrap;
 font-weight:600;
 }
 
+/* --- TADY JSOU TY NOVÉ ŘÁDKY PRO PŘEPÍNAČ JAZYKŮ --- */
+
+.lang-switch {
+    text-align: right;
+    max-width: 800px;
+    margin: 40px auto -20px auto;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+.lang-link {
+    color: #666;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 5px;
+}
+
+.lang-link:hover {
+    color: #fff;
+}
+
+.lang-link.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.cooking-time {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 60px;
+    padding: 20px;
+    border: 1px solid #333;
+    text-transform: uppercase;
+}
