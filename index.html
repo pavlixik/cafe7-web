@@ -35,10 +35,16 @@
 
         <div class="hero-content">
             <h1>Vítejte v Cafe 7 Bistro</h1>
+
             <p>
-                Kavárna v srdci Holešovic s výběrovou kávou a jedinečnou atmosférou.
+                Kavárna v srdci Holešovic s výběrovou kávou
+                a jedinečnou atmosférou.
             </p>
-            <a href="#o-nas" class="btn-main">O NÁS</a>
+
+            <a href="#o-nas" class="btn-main">
+                O NÁS
+            </a>
+
         </div>
     </section>
 
@@ -46,7 +52,9 @@
     <section id="o-nas" class="section">
         <div class="showcase-wrapper">
             <div class="showcase-text">
+
                 <h2>NĚCO O NÁS</h2>
+
                 <p>
                     Kavárna v srdci Holešovic s výběrovou kávou a jedinečnou atmosférou, kde můžete ochutnat naše koláče,
                     zákusky, dorty, obložené chleby, plněné bagely, croissanty, panini.
@@ -63,7 +71,9 @@
                     Naši kavárnu je možno využít k rodinným oslavám, pracovním schůzkám, nebo jen tak k příjemnému
                     posezení s přáteli.
                 </p>
+
             </div>
+
             <div class="showcase-image">
                 <img src="galerie5.jpg">
             </div>
@@ -73,8 +83,8 @@
 
     <section id="gallery" class="section">
         <h2>Galerie</h2>
+
         <div class="gallery">
-            <!-- Původní fotky -->
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="galerie1.jpg">
             </div>
@@ -87,38 +97,29 @@
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="galerie4.jpg">
             </div>
-
-            <!-- NOVÉ FOTKY (10-100) -->
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="10.jpg">
             </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="20.jpg">
+        </div>
+
+        <div id="extra-gallery" class="gallery-accordion">
+            <div class="gallery" style="padding-top: 20px;">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="20.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="30.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="40.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="50.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="60.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="70.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="80.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="90.jpg"></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="100.jpg"></div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="30.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="40.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="50.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="60.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="70.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="80.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="90.jpg">
-            </div>
-            <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="100.jpg">
-            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <button id="gallery-trigger" class="btn-main" style="cursor: pointer; min-width: 250px;">
+                ZOBRAZIT DALŠÍ FOTKY
+            </button>
         </div>
     </section>
 
@@ -152,9 +153,8 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX MODAL -->
     <div id="lightbox" onclick="this.style.display='none'">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
         <img id="lightbox-img" src="">
     </div>
 
@@ -162,14 +162,33 @@
         © 2026 Cafe 7 Bistro
     </footer>
 
-    <!-- LIGHTBOX SCRIPT -->
     <script>
+        // Funkce pro otevření zvětšené fotky
         function openLightbox(element) {
             const src = element.querySelector('img').src;
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
         }
+
+        // Funkce pro vysunutí a zavření galerie (Accordion)
+        const trigger = document.getElementById('gallery-trigger');
+        const extraGallery = document.getElementById('extra-gallery');
+
+        trigger.addEventListener('click', function () {
+            if (extraGallery.classList.contains('open')) {
+                extraGallery.classList.remove('open');
+                this.textContent = 'ZOBRAZIT DALŠÍ FOTKY';
+                // Volitelné: Odskrolování zpět nahoru ke galerii po zavření
+                document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                extraGallery.classList.add('open');
+                this.textContent = 'ZAVŘÍT GALERII';
+            }
+        });
     </script>
 
 </body>
+
 </html>
