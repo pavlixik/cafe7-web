@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe 7 Bistro</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cafe 7 Bistro | Holešovice</title>
+    <meta name="description" content="Cafe 7 Bistro - výběrová káva, brunche, domácí dezerty a skvělá atmosféra v srdci Holešovic.">
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts nebo další linky mohou přijít sem -->
 </head>
 
 <body>
 
+    <!-- NAVIGACE -->
     <header>
         <div class="logo">
             Cafe <span class="circle">7</span> Bistro
@@ -17,105 +21,111 @@
 
         <nav>
             <a href="#hero">Domů</a>
+            <a href="#o-nas">O nás</a>
             <a href="#gallery">Galerie</a>
             <a href="#contact">Kontakt</a>
-            <a href="napojovy-listek.html">Nápojový lístek</a>
             <a href="jidelni-listek.html">Jídelní lístek</a>
-            <a href="#o-nas">O nás</a>
+            <a href="napojovy-listek.html">Nápojový lístek</a>
         </nav>
     </header>
 
 
+    <!-- HERO SEKCE S VIDEEM -->
     <section id="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="promo-desktop.mp4" type="video/mp4">
+            Vaše prohlížeč nepodporuje video tag.
         </video>
 
         <div class="overlay"></div>
 
         <div class="hero-content">
             <h1>Vítejte v Cafe 7 Bistro</h1>
-
             <p>
-                Kavárna v srdci Holešovic s výběrovou kávou
-                a jedinečnou atmosférou.
+                Kavárna v srdci Holešovic s výběrovou kávou, 
+                čerstvými zákusky a jedinečnou atmosférou pro každý den.
             </p>
-
-            <a href="#o-nas" class="btn-main">
-                O NÁS
-            </a>
-
+            <div class="hero-btns">
+                <a href="#o-nas" class="btn-main">O NÁS</a>
+                <a href="jidelni-listek.html" class="btn-main" style="margin-left: 10px;">MENU</a>
+            </div>
         </div>
     </section>
 
 
+    <!-- SEKCE O NÁS -->
     <section id="o-nas" class="section">
         <div class="showcase-wrapper">
             <div class="showcase-text">
-
                 <h2>NĚCO O NÁS</h2>
-
                 <p>
-                    Kavárna v srdci Holešovic s výběrovou kávou a jedinečnou atmosférou, kde můžete ochutnat naše koláče,
-                    zákusky, dorty, obložené chleby, plněné bagely, croissanty, panini.
+                    Jsme moderní bistro v srdci Holešovic. Zakládáme si na kvalitě surovin a poctivé přípravě.
+                    U nás můžete ochutnat naše domácí koláče, zákusky, dorty, obložené chleby, plněné bagely, 
+                    čerstvé croissanty nebo zapečené panini.
                 </p>
                 <p>
-                    Dále pro Vás připravujeme BRUNCHE s výběrem míchaných vajec, omelet, zeleninových salátů, polévek a
-                    pizz. Ke sklence vína nebo prosecca si můžete dopřát sýrovo-uzeninový talířek s olivami.
+                    Dále pro Vás každý den připravujeme BRUNCHE s výběrem míchaných vajec, omelet, 
+                    čerstvých zeleninových salátů, polévek a italské pizzy. 
                 </p>
                 <p>
-                    Zpříjemnit den si můžete zmrzlinou nebo sorbetem La Panna. Připravujeme zmrzlinové poháry, palačinky
-                    se zmrzlinou nebo vafle dle Vašeho výběru.
+                    Ke sklence vína nebo vychlazeného prosecca si u nás můžete dopřát sýrovo-uzeninový talířek 
+                    s výběrovými olivami. Zpříjemnit den si můžete také řemeslnou zmrzlinou nebo sorbetem La Panna. 
                 </p>
                 <p>
-                    Naši kavárnu je možno využít k rodinným oslavám, pracovním schůzkám, nebo jen tak k příjemnému
-                    posezení s přáteli.
+                    Naši kavárnu je možno využít k rodinným oslavám, pracovním schůzkám, 
+                    nebo jen tak k příjemnému posezení s přáteli u skvělé kávy.
                 </p>
-
             </div>
 
             <div class="showcase-image">
-                <img src="galerie5.jpg">
+                <img src="galerie5.jpg" alt="Interiér Cafe 7 Bistro">
             </div>
         </div>
     </section>
 
 
+    <!-- SEKCE GALERIE S ROZEVÍRÁNÍM -->
     <section id="gallery" class="section">
         <h2>Galerie</h2>
 
+        <!-- PRVNÍCH 5 FOTEK (STÁLE VIDITELNÉ) -->
         <div class="gallery">
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="galerie1.jpg">
+                <img src="galerie1.jpg" alt="Foto 1">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="galerie2.jpg">
+                <img src="galerie2.jpg" alt="Foto 2">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="galerie3.jpg">
+                <img src="galerie3.jpg" alt="Foto 3">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="galerie4.jpg">
+                <img src="galerie4.jpg" alt="Foto 4">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="10.jpg">
+                <img src="10.jpg" alt="Foto 5">
             </div>
         </div>
 
+        <!-- SKRYTÝ KONTEJNER PRO DALŠÍ FOTKY (ANIMOVANÝ) -->
         <div id="extra-gallery" class="gallery-accordion">
-            <div class="gallery" style="padding-top: 20px;">
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="20.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="30.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="40.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="50.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="60.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="70.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="80.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="90.jpg"></div>
-                <div class="gallery-item" onclick="openLightbox(this)"><img src="100.jpg"></div>
+            <div class="gallery-inner">
+                <div class="gallery" style="padding-top: 20px;">
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="20.jpg" alt="Foto 6"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="30.jpg" alt="Foto 7"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="40.jpg" alt="Foto 8"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="50.jpg" alt="Foto 9"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="60.jpg" alt="Foto 10"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="70.jpg" alt="Foto 11"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="80.jpg" alt="Foto 12"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="90.jpg" alt="Foto 13"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="100.jpg" alt="Foto 14"></div>
+                    <!-- Zde můžeš přidávat další fotky až do 100 -->
+                </div>
             </div>
         </div>
 
+        <!-- TLAČÍTKKO PRO OVLÁDÁNÍ GALERIE -->
         <div style="margin-top: 40px;">
             <button id="gallery-trigger" class="btn-main" style="cursor: pointer; min-width: 250px;">
                 ZOBRAZIT DALŠÍ FOTKY
@@ -124,71 +134,109 @@
     </section>
 
 
+    <!-- SEKCE KONTAKT -->
     <section id="contact" class="section dark">
         <h2>Kontakt</h2>
         <div class="contact-wrapper">
+            
             <div class="contact-box">
+                <h3>Kde nás najdete</h3>
                 <p>
                     Dukelských Hrdinů 44<br>
-                    Praha 7
+                    170 00 Praha 7 - Holešovice
                 </p>
                 <p>
-                    +420 727 970 977
+                    <strong>Telefon:</strong> +420 727 970 977<br>
+                    <strong>E-mail:</strong> info@cafe7bistro.cz
                 </p>
-                <iframe src="https://www.google.com/maps?q=Dukelských+Hrdinů+44+Praha&output=embed"></iframe>
+                <iframe src="https://www.google.com/maps?q=Dukelských+Hrdinů+44+Praha&output=embed" 
+                        allowfullscreen="" loading="lazy"></iframe>
             </div>
 
             <div class="contact-box">
                 <h3>Otevírací doba</h3>
                 <div class="hours">
-                    <div><span>Pondělí</span><span>7:00 – 20:00</span></div>
-                    <div><span>Úterý</span><span>7:00 – 20:00</span></div>
-                    <div><span>Středa</span><span>7:00 – 20:00</span></div>
-                    <div><span>Čtvrtek</span><span>7:00 – 20:00</span></div>
-                    <div><span>Pátek</span><span>7:00 – 20:00</span></div>
-                    <div><span>Sobota</span><span>8:00 – 20:00</span></div>
-                    <div><span>Neděle</span><span>8:00 – 20:00</span></div>
+                    <div><span>Pondělí</span><span>07:00 – 20:00</span></div>
+                    <div><span>Úterý</span><span>07:00 – 20:00</span></div>
+                    <div><span>Středa</span><span>07:00 – 20:00</span></div>
+                    <div><span>Čtvrtek</span><span>07:00 – 20:00</span></div>
+                    <div><span>Pátek</span><span>07:00 – 20:00</span></div>
+                    <div><span>Sobota</span><span>08:00 – 20:00</span></div>
+                    <div><span>Neděle</span><span>08:00 – 20:00</span></div>
                 </div>
+                <p style="margin-top: 20px; font-size: 14px; opacity: 0.6;">
+                    * O svátcích se může otevírací doba lišit. Sledujte náš Instagram.
+                </p>
             </div>
+
         </div>
     </section>
 
-    <div id="lightbox" onclick="this.style.display='none'">
-        <span class="close">×</span>
-        <img id="lightbox-img" src="">
+
+    <!-- LIGHTBOX (MODÁLNÍ OKNO PRO FOTKY) -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Zvětšený náhled">
     </div>
 
+
+    <!-- PATIČKA -->
     <footer>
-        © 2026 Cafe 7 Bistro
+        <p>© 2026 Cafe 7 Bistro. Všechna práva vyhrazena.</p>
     </footer>
 
+
+    <!-- JAVASCRIPT PRO FUNKČNOST -->
     <script>
-        // Funkce pro otevření zvětšené fotky
+        // --- LIGHTBOX FUNKCE ---
         function openLightbox(element) {
             const src = element.querySelector('img').src;
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = src;
-            lightbox.style.display = 'flex';
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            
+            lbImg.src = src;
+            lb.style.display = 'flex';
+            // Krátký timeout pro spuštění CSS transition opacity
+            setTimeout(() => { lb.classList.add('open'); }, 10);
         }
 
-        // Funkce pro vysunutí a zavření galerie (Accordion)
-        const trigger = document.getElementById('gallery-trigger');
-        const extraGallery = document.getElementById('extra-gallery');
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('open');
+            // Počkáme na konec animace a pak schováme display
+            setTimeout(() => { lb.style.display = 'none'; }, 300);
+        }
 
-        trigger.addEventListener('click', function () {
-            if (extraGallery.classList.contains('open')) {
-                extraGallery.classList.remove('open');
+        // --- AKORDEON GALERIE (VYSOUNUTÍ) ---
+        const trigger = document.getElementById('gallery-trigger');
+        const accordion = document.getElementById('extra-gallery');
+
+        trigger.addEventListener('click', function() {
+            const inner = accordion.querySelector('.gallery-inner');
+            
+            if (accordion.classList.contains('open')) {
+                // Zavírání
+                accordion.style.maxHeight = '0px';
+                accordion.classList.remove('open');
                 this.textContent = 'ZOBRAZIT DALŠÍ FOTKY';
-                // Volitelné: Odskrolování zpět nahoru ke galerii po zavření
+                
+                // Scroll zpět na začátek galerie pro pohodlí
                 document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
             } else {
-                extraGallery.classList.add('open');
+                // Otevírání - vypočítáme reálnou výšku obsahu
+                accordion.style.maxHeight = inner.offsetHeight + 'px';
+                accordion.classList.add('open');
                 this.textContent = 'ZAVŘÍT GALERII';
+            }
+        });
+
+        // Přepočet výšky při změně velikosti okna (aby se nerozbila animace)
+        window.addEventListener('resize', () => {
+            if (accordion.classList.contains('open')) {
+                accordion.style.maxHeight = accordion.querySelector('.gallery-inner').offsetHeight + 'px';
             }
         });
     </script>
 
 </body>
-
 </html>
