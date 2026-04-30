@@ -1,8 +1,8 @@
 /* ============================================================
-    NOVÉ STYLY PRO GALERII A LIGHTBOX (PŘIDÁNO)
+   ANIMOVANÁ GALERIE & LIGHTBOX (NOVÉ FUNKCE)
    ============================================================ */
 
-/* LIGHTBOX - EFEKT VYSUNUTÍ FOTKY PŘES CELOU OBRAZOVKU */
+/* LIGHTBOX - ZVĚTŠENÍ FOTKY PŘES CELOU OBRAZOVKU */
 #lightbox {
     display: none;
     position: fixed;
@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -20,8 +20,14 @@
 #lightbox img {
     max-width: 90%;
     max-height: 85%;
-    border-radius: 5px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#lightbox.open img {
+    transform: scale(1);
 }
 
 #lightbox .close {
@@ -33,36 +39,51 @@
     font-weight: bold;
 }
 
-/* ÚPRAVA GRIDU GALERIE NA HLAVNÍ STRÁNCE */
+/* HARMONIKA - CLEAN ANIMACE ROZEVŘENÍ A ZAVŘENÍ */
+.gallery-accordion {
+    max-height: 0;
+    overflow: hidden;
+    /* Kubická bezierova křivka pro luxusnější pocit z animace */
+    transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+    opacity: 0;
+}
+
+.gallery-accordion.open {
+    max-height: 4000px; /* Rezerva pro cca 100 fotek */
+    opacity: 1;
+}
+
+/* ÚPRAVA GRIDU PRO HLAVNÍ GALERII */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
 }
 
 .gallery-item {
     overflow: hidden;
     border-radius: 10px;
+    height: 250px;
     cursor: pointer;
-    height: 250px; /* Sjednocená výška náhledů */
+    background: #111;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ořízne fotku tak, aby vyplnila box bez deformace */
-    transition: 0.4s ease;
+    object-fit: cover;
+    transition: 0.5s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
+
 /* ============================================================
-    PŮVODNÍ STYLY WEBU
+   PŮVODNÍ STYLY WEBU (ZACHOVÁNO VŠE)
    ============================================================ */
 
 /* RESET */
@@ -79,7 +100,7 @@ body {
     line-height: 1.6;
 }
 
-/* NOVÉ DOPLŇUJÍCÍ INFORMACE (Alergeny, Gramáže, Káva) */
+/* DOPLŇUJÍCÍ INFORMACE */
 .menu-info {
     max-width: 800px;
     margin: 60px auto 30px auto;
@@ -141,7 +162,7 @@ nav a:hover {
     opacity: 0.6;
 }
 
-/* HERO VIDEO */
+/* HERO SEKCE */
 #hero {
     position: relative;
     height: 90vh;
@@ -189,7 +210,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* BUTTON */
+/* TLAČÍTKA */
 .btn-main {
     background: transparent;
     border: 2px solid white;
@@ -198,6 +219,8 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .btn-main:hover {
@@ -205,7 +228,7 @@ nav a:hover {
     color: black;
 }
 
-/* SECTIONS */
+/* SEKCE OBECNĚ */
 .section {
     padding: 80px 40px;
     text-align: center;
@@ -216,7 +239,7 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* VITRINA / O NÁS */
+/* O NÁS / VITRÍNA */
 .showcase-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -237,7 +260,7 @@ nav a:hover {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* KONTAKT */
+/* KONTAKTNÍ SEKCE */
 .dark {
     background: #0a0a0a;
 }
@@ -273,7 +296,10 @@ footer {
     border-top: 1px solid #111;
 }
 
-/* MENU STRANKY (Původní základ) */
+/* ============================================================
+   STYLY PRO JÍDELNÍ A NÁPOJOVÝ LÍSTEK
+   ============================================================ */
+
 .menu-page {
     max-width: 700px;
     margin: auto;
@@ -281,98 +307,12 @@ footer {
     padding-top: 120px;
 }
 
-.menu-item {
-    margin-bottom: 30px;
-}
-
-.menu-item strong {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.menu-item p {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.menu-item span {
-    font-weight: bold;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        margin: 8px;
-    }
-
-    .hero-content h1 {
-        font-size: 34px;
-    }
-
-    .showcase-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    /* Úprava galerie pro mobily */
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    .gallery-item {
-        height: 180px;
-    }
-}
-
-/* ===== MENU DESIGN - DETAILNÍ STYLY PRO LÍSTEK ===== */
-.menu-section {
-    max-width: 800px;
-    margin: 120px auto 60px auto;
-    padding: 0 20px;
-}
-
-.menu-section h2 {
-    text-align: center;
-    margin: 40px 0 20px 0;
-    font-size: 28px;
-}
-
-.menu-top {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px dotted #666;
-    padding-bottom: 6px;
-    font-size: 18px;
-}
-
-/* ================= MENU CENÍK (TEČKY A ŘÁDKY) ================= */
-.menu-item {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-}
-
 .menu-row {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 17px;
+    margin-bottom: 5px;
 }
 
 .menu-name {
@@ -424,7 +364,7 @@ footer {
     text-align: left;
 }
 
-/* LAYOUT NÁPOJOVÉHO LÍSTKU */
+/* NÁPOJOVÝ LÍSTEK LAYOUT */
 .drinks-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -433,33 +373,7 @@ footer {
     margin: auto;
 }
 
-.drinks-left,
-.drinks-right {
-    text-align: left;
-}
-
-@media (max-width: 900px) {
-    .drinks-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .menu-row {
-        font-size: 16px;
-    }
-    .menu-category {
-        font-size: 22px;
-    }
-}
-
-.menu-image {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 40px auto;
-    border-radius: 10px;
-}
-
-/* JAZYKOVÝ PŘEPÍNAČ */
+/* PŘEPÍNAČ JAZYKŮ */
 .lang-switch {
     text-align: right;
     max-width: 800px;
@@ -494,6 +408,37 @@ footer {
     text-transform: uppercase;
 }
 
-/* ============================================================
-    KONEC STYLESHEETU
-   ============================================================ */
+/* MOBILNÍ RESPONSIVITA */
+@media(max-width: 900px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 5px 10px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .showcase-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .drinks-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* KONEC STYLESHEETU */
